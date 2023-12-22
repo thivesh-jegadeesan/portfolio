@@ -19,11 +19,21 @@ def resume(request):
     # return render(request, 'resume/index.html')
 
 def skills(request):
-    template = loader.get_template('skills/index.html')
-    return HttpResponse(template.render())
-    # return render(request, 'skills/index.html')
+    # template = loader.get_template('skills/index.html')
+    # return HttpResponse(template.render())
+    return render(request, 'skills/index.html')
 
 def contact(request):
     template = loader.get_template('contact/index.html')
     return HttpResponse(template.render())
     # return render(request, 'contact/index.html')
+
+def resume(request):
+    template = loader.get_template('resume/index.html')
+    return HttpResponse(template.render())
+    # return render(request, 'contact/index.html')
+    
+def project(request):
+    # template = loader.get_template('skills/index.html')
+    # return HttpResponse(template.render())
+    return render(request, 'projects/index.html')

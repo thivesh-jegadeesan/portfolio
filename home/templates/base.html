@@ -11,6 +11,7 @@
     <style>
         body {
           font-family: "Lato", sans-serif;
+          background-color: #95968f4f;
         }
         
         .sidenav {
@@ -46,6 +47,9 @@
           color: #f1f1f1;
           border-bottom:2px solid #5e678d;
         }
+        .mystyle{
+          color: #f1f1f1;
+        }
         
         .content {
           margin-left: 20%; /* Same as the width of the sidenav */
@@ -55,7 +59,10 @@
         
         @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
+          .sidenava {font-size: 18px;}
+        }
+        p{
+          font-size: 18px;
         }
         </style>
 </head>
@@ -96,13 +103,12 @@
           </div>
         </div>
         <div style="margin-top:10%">
-            <a class="sidenava" href="/portfolio/Home">
-              {% comment %} <img src="{% static "images/home.jpeg" %}" width="7%" style="border-radius: 70%; vertical-align:middle"> {% endcomment %}
-              Home</a>
-            <a class="sidenava" href="/portfolio/about">About</a>
-            <a class="sidenava" href="/portfolio/resume">Resume</a>
-            <a class="sidenava" href="/portfolio/skill">Skills and achivements</a>
-            <a class="sidenava" href="/portfolio/contact">Contact</a>
+            <a class="sidenava" id="Home" href="/portfolio/Home">Home</a>
+            <a class="sidenava" id="about" href="/portfolio/about">About</a>
+            <a class="sidenava" id="resume" href="/portfolio/resume">Resume</a>
+            <a class="sidenava" id="skill" href="/portfolio/skill">Skills and achivements</a>
+            <a class="sidenava" id="projects" href="/portfolio/project">projects</a>
+            <a class="sidenava" id="contact" href="/portfolio/contact">Contact</a>
         </div>
       </div>
 
@@ -111,4 +117,18 @@
             {% block content %}{% endblock %}
     </div>
 </body>
+<script>
+  const sidenava = document.getElementsByClassName("sidenava");
+  var urlval = window.location.href.split('/')[4];
+
+  for(let i=0; i<(document.getElementsByClassName('sidenava')).length; i++){
+    if(document.getElementsByClassName('sidenava')[i].id == urlval)
+    {
+      document.getElementById(document.getElementsByClassName('sidenava')[i].id).classList.add("mystyle");
+    }
+  }
+
+  console.log(urlval, sidenava, document.getElementsByClassName('sidenava')[0].id, (document.getElementsByClassName('sidenava')).length,
+  )
+</script>
 </html>
