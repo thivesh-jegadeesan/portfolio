@@ -1,10 +1,214 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
-        <div class="container">
-            <h1>Welcome to the Home Page</h1>
+<body onload="myFunction()" style="background-image: url({% static 'images/thiveshbg1.jpg' %});  background-repeat: no-repeat; background-size: 100% 505%;">
+        <div class="container" >
+           
+            {% comment %} <div class="d-flex flex-grow-10 justify-content-center align-items-center"> {% endcomment %}
+                <div class="row" style="padding:50px 0px 0px 100px; font-weight: bold; font-size:40px">
+                    Thivesh Jegadeesan            
+                </div>
+                <div class="row" style="padding:0px 0px 0px 120px">
+                    <div class="col-md-1"style="margin:0px 0px 0px 50px; width: fit-content;font-weight: bold; font-size:40px">
+                        I'm a
+                    </div> 
+                    <div class="col-md-8" id="devdiv" style="font-weight: bold; font-size:40px"></div>      
+                </div>
         </div>
+</body>
+
+
+
+<script>
+    const element = document.getElementById("devdiv");
+    function myFunction() {
+       devinterval = setInterval(function() {
+            if (element.innerHTML === "developer...!") {
+                element.innerHTML = '';
+                clearInterval(devinterval);
+                console.log('if');
+                freelancer();
+
+            } else {
+                if(element.innerHTML == "developer...")
+                {
+                element.innerHTML += "!";
+                }
+                else if(element.innerHTML == "developer..")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "developer.")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "developer")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "develope")
+                {
+                element.innerHTML += "r";
+                }
+                else if(element.innerHTML == "develop")
+                {
+                element.innerHTML += "e";
+                }
+                else if(element.innerHTML == "develo")
+                {
+                element.innerHTML += "p";
+                }
+                else if(element.innerHTML == "devel")
+                {
+                    element.innerHTML += "o";
+                }
+                else if(element.innerHTML == "deve")
+                {
+                    element.innerHTML += "l";
+                }
+                else if(element.innerHTML == "dev")
+                {
+                    element.innerHTML += "e";
+                }
+                else if(element.innerHTML == "de")
+                {
+                    element.innerHTML += "v";
+                }
+                else if(element.innerHTML == "d")
+                {
+                    element.innerHTML += "e";
+                }
+                else{
+                    element.innerHTML += "d";
+                }
+            }
+        }, 400);
+      }
+      function freelancer(){
+        devinterval = setInterval(function() {
+            if (element.innerHTML === "freelancer...!") {
+                element.innerHTML = '';
+                clearInterval(devinterval);
+                Student();
+
+            } 
+                else {
+                    if(element.innerHTML == "freelancer...")
+                {
+                element.innerHTML += "!";
+                }
+                else if(element.innerHTML == "freelancer..")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "freelancer.")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "freelancer")
+                {
+                element.innerHTML += ".";
+                }
+                   else if(element.innerHTML == "freelance")
+                    {
+                    element.innerHTML += "r";
+                    }
+                    else if(element.innerHTML == "freelanc")
+                    {
+                    element.innerHTML += "e";
+                    }
+                    else if(element.innerHTML == "freelan")
+                    {
+                    element.innerHTML += "c";
+                    }
+                    else if(element.innerHTML == "freela")
+                    {
+                    element.innerHTML += "n";
+                    }
+                    else if(element.innerHTML == "freel")
+                    {
+                        element.innerHTML += "a";
+                    }
+                    else if(element.innerHTML == "free")
+                    {
+                        element.innerHTML += "l";
+                    }
+                    else if(element.innerHTML == "fre")
+                    {
+                        element.innerHTML += "e";
+                    }
+                    else if(element.innerHTML == "fr")
+                    {
+                        element.innerHTML += "e";
+                    }
+                    else if(element.innerHTML == "f")
+                    {
+                        element.innerHTML += "r";
+                    }
+                    else{
+                        element.innerHTML += "f";
+                    }
+                }
+
+        }, 400);
+      }
+      function Student(){
+        devinterval = setInterval(function() {
+            if (element.innerHTML === "student...!") {
+                element.innerHTML = '';
+                clearInterval(devinterval);
+                myFunction();
+            } else {
+                if(element.innerHTML == "student...")
+                {
+                element.innerHTML += "!";
+                }
+                else if(element.innerHTML == "student..")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "student.")
+                {
+                element.innerHTML += ".";
+                }
+                else if(element.innerHTML == "student")
+                {
+                element.innerHTML += ".";
+                }
+                   else if(element.innerHTML == "studen")
+                    {
+                    element.innerHTML += "t";
+                    }
+                    else if(element.innerHTML == "stude")
+                    {
+                        element.innerHTML += "n";
+                    }
+                    else if(element.innerHTML == "stud")
+                    {
+                        element.innerHTML += "e";
+                    }
+                    else if(element.innerHTML == "stu")
+                    {
+                        element.innerHTML += "d";
+                    }
+                    else if(element.innerHTML == "st")
+                    {
+                        element.innerHTML += "u";
+                    }
+                    else if(element.innerHTML == "s")
+                    {
+                        element.innerHTML += "t";
+                    }
+                    else{
+                        element.innerHTML += "s";
+                    }
+                }
+            
+        }, 400);
+      }
+</script>
 {% endblock %}

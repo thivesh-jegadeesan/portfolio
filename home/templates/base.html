@@ -25,7 +25,7 @@
           padding: 20px 20px 20px 5px;
         }
         
-        .sidenav a{
+        .sidenava{
           padding: 6px 8px 6px 16px;
           text-decoration: none;
           font-size: 18px;
@@ -42,7 +42,7 @@
             margin-top:10%;
         }
         
-        .sidenav a:hover {
+        .sidenava:hover {
           color: #f1f1f1;
           border-bottom:2px solid #5e678d;
         }
@@ -69,31 +69,40 @@
           </center>
         </div>
         <div>
-          <div class="name">Thivesh Jegadeesan</div>
+          <div class="name text-center">Thivesh Jegadeesan</div>
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-2">
             </div>
             <div class="col-md-2">
-
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100005485574765">
               <img src="{% static "images/fb.png" %}" width="100%" style="border-radius: 10%;">
+              </a>
             </div>
             <div class="col-md-2">
-              <img src="{% static "images/insta.jpeg" %}" width="100%" style="border-radius: 22%;">
+              <a target="_blank" href="https://www.instagram.com/star_._boy._/">
+                <img src="{% static "images/insta.jpeg" %}" width="100%" style="border-radius: 22%;">
+              </a>
             </div>
             <div class="col-md-2">
-              <img src="{% static "images/github.png" %}" width="100%" style="border-radius: 50%;">
+              <a target="_blank" href="https://github.com/thivesh-jegadeesan">
+                <img src="{% static "images/github.png" %}" width="100%" style="border-radius: 55%;">
+              </a>
             </div>
             <div class="col-md-2">
-              <img src="{% static "images/linkedin.png" %}" width="100%" style="border-radius: 10%;">
+              <a target="_blank" href="https://www.linkedin.com/in/thivesh-jegadeesan-7406b3182/">
+                <img src="{% static "images/linkedin.png" %}" width="100%" style="border-radius: 10%;">
+              </a>
             </div>
           </div>
         </div>
         <div style="margin-top:10%">
-            <a href="/portfolio/Home">Home</a>
-            <a href="/portfolio/about">About</a>
-            <a href="/portfolio/resume">Resume</a>
-            <a href="/portfolio/skill">Skills and achivements</a>
-            <a href="/portfolio/contact">Contact</a>
+            <a class="sidenava" href="/portfolio/Home">
+              {% comment %} <img src="{% static "images/home.jpeg" %}" width="7%" style="border-radius: 70%; vertical-align:middle"> {% endcomment %}
+              Home</a>
+            <a class="sidenava" href="/portfolio/about">About</a>
+            <a class="sidenava" href="/portfolio/resume">Resume</a>
+            <a class="sidenava" href="/portfolio/skill">Skills and achivements</a>
+            <a class="sidenava" href="/portfolio/contact">Contact</a>
         </div>
       </div>
 
