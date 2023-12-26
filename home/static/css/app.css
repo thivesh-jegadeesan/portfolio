@@ -1,0 +1,72 @@
+/* App css file */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #95968f4f;
+}
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    
+}
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding: 20px 20px 20px 5px;
+}
+
+.sidenava{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    bottom: 2%;
+}
+.name{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    margin-top:10%;
+}
+
+.sidenava:hover {
+    color: #f1f1f1;
+    border-bottom:2px solid #5e678d;
+}
+.mystyle{
+    color: #f1f1f1;
+}
+
+.content {
+    margin-left: 20%; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenava {font-size: 18px;}
+}
+p{
+    font-size: 18px;
+}
+.infoname{
+    font-size:18px;
+}
+.infonameb{
+    font-weight:600;
+    font-size:18px;
+}
