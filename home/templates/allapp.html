@@ -99,6 +99,41 @@
         font-size:12px;
         padding: 5px;
     }
+    #goToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #5e678e;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    #goToTopBtn::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: -130%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        font-size:12px;
+    }
+    
+    #goToTopBtn:hover::before {
+        font-size:12px;
+        opacity: 1;
+    }
+    
     </style>
 </head>
 <body onload="myFunction()">
@@ -153,7 +188,7 @@
     <!-- Content block to be overridden in child templates -->
     <div class="content-fluid" style="margin-left:20%">
         {% comment %} home page starts here {% endcomment %}
-        
+        <button onclick="goToTop()" id="goToTopBtn" title="Go to Top" data-tooltip="Scroll to Top">^</button>
             <section class="container" id="Home" style="background-image: url({% static 'images/thiveshbg1.jpg' %});  background-repeat: no-repeat; background-size: 100% 100%; padding: 10px 150px 500px 150px;">
                
                 {% comment %} <section class="d-flex flex-grow-10 justify-content-center align-items-center"> {% endcomment %}
