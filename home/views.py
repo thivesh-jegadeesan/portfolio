@@ -3,6 +3,11 @@ from django.template import loader
 from django.http import HttpResponse
 
 # Create your views here.
+def allapp(request):
+    # template = loader.get_template('home/index.html')
+    # return HttpResponse(template.render())
+    return render(request, 'allapp.html')
+
 def home(request):
     # template = loader.get_template('home/index.html')
     # return HttpResponse(template.render())

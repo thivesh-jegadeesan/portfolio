@@ -37,7 +37,7 @@ const myBarChart = new Chart(ctx, {
 
 // Sample data representing points on the road map
 const roadMapData = [
-  { label: 'Bachelors', x: 20, y: 100 },
+  { label: 'Bachelors', x: 100 , y: 100 },
   { label: 'Cource: Core Java, Selenium', x: 250, y: 100 },
   { label: 'Joined as "Software Developer trainee" @ Codentrix technologies', x: 325, y: 50 },
   { label: 'HTML, CSS', x: 400, y: 100 },
@@ -48,8 +48,8 @@ const roadMapData = [
   { label: 'MySQL', x: 700, y: 200 },
   { label: 'Proj. Tracerbee', x: 550, y: 200 },
   { label: 'Proj. PharmTracQR', x: 400, y: 200 },
-  { label: 'Senior Software Engineer', x: 20, y: 200 },
-  { label: 'Award "Excellence"', x: 20, y: 300 },
+  { label: 'Senior Software Engineer', x: 100 , y: 200 },
+  { label: 'Award "Excellence"', x: 100 , y: 300 },
   { label: 'Python, Django', x: 250, y: 300 },
   { label: 'Proj. Formulation', x: 400, y: 300 },
   { label: 'Masters - Datascience', x: 700, y: 300 },
