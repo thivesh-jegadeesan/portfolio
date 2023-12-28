@@ -28,6 +28,8 @@ jobs:
         run: |
           rm -rf .DS_Store
           rm -rf portfolio/__pycache__
+          rm -f db.sqlite3
+          rm -rf venv/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -36,6 +38,8 @@ jobs:
           exclude: |
             .DS_Store
             portfolio/__pycache__
+            db.sqlite3
+            venv/**
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
