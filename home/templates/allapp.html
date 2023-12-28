@@ -7,134 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <title>{% block title %}My portfolio{% endblock %}</title>
-    <style>
-
-        .timeline {
-            position: relative;
-            max-width: auto;
-            margin:  auto;
-            padding: 20px;
-        }
-    
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 85%;
-            width: 2px;
-            height: 100%;
-            background-color: #000000;
-            transform: translateX(-50%);
-        }
-    
-        .timeline-item {
-            position: relative;
-            padding: 20px 0;
-        }
-    
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 88.5%;
-            width: 20px;
-            height: 20px;
-            background-color: #000000;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-    
-        .h2 {
-            margin-top: 0;
-            font-size: 20px;
-            max-width: 340px;
-        }
-        .h5{
-            text-align: center;
-            font-weight: 550;
-        }
-    
-        .p {
-            margin-bottom: 0;
-            max-width: 340px;
-            font-size: 12px;
-        }
-
-        .project-box img {
-            width: 100%;
-            height: 100%;
-            transition: 0.5s cubic-bezier(0.25, 0.1, 0.14, 0.6);
-        }
-    
-        {% comment %} .project-box img:hover{
-            width: 102%;
-        } {% endcomment %}
-        .projectcontent .project-box:hover{
-            width: 96%;
-            box-shadow: 2px 2px 11px 1px;
-        }
-    .projectcontent .project-box {
-        position: relative;
-        border-radius: 2rem;
-        overflow: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        transition: width 2s;
-        width: 400px;
-        box-shadow: inset -1px 0px 4px 1px;
-    }
-    .overlay{
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        background-color: #9f9f9f47;
-    }
-    .project-p{
-        font-size:12px;
-        padding: 5px;
-    }
-    #goToTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #5e678e;
-        color: #fff;
-        border: none;
-        border-radius: 30px;
-        padding: 15px;
-        cursor: pointer;
-        z-index: 10000;
-    }
-
-    #goToTopBtn::before {
-        content: attr(data-tooltip);
-        position: absolute;
-        top: -130%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #333;
-        color: #fff;
-        padding: 5px;
-        border-radius: 3px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        pointer-events: none;
-        font-size:12px;
-    }
-    
-    #goToTopBtn:hover::before {
-        font-size:12px;
-        opacity: 1;
-    }
-    
-    </style>
 </head>
 <body onload="myFunction()">
 
@@ -189,9 +67,7 @@
     <div class="content-fluid" style="margin-left:20%">
         {% comment %} home page starts here {% endcomment %}
         <button onclick="goToTop()" id="goToTopBtn" title="Go to Top" data-tooltip="Scroll to Top">^</button>
-            <section class="container" id="Home" style="background-image: url({% static 'images/thiveshbg1.jpg' %});  background-repeat: no-repeat; background-size: 100% 100%; padding: 10px 150px 500px 150px;">
-               
-                {% comment %} <section class="d-flex flex-grow-10 justify-content-center align-items-center"> {% endcomment %}
+            <div class="container" id="Home" style="background-image: url({% static 'images/thiveshbg1.jpg' %});  background-repeat: no-repeat; background-size: 100% 100%; padding: 10px 150px 500px 150px;">
                     <div class="row" style="padding:50px 0px 0px 100px; font-weight: bold; font-size:40px">
                         Thivesh Jegadeesan            
                     </div>
@@ -201,7 +77,7 @@
                         </div> 
                         <div class="col-md-8" id="devdiv" style="font-weight: bold; font-size:40px"></div>      
                     </div>
-            </section>
+            </div>
 
         {% comment %} home page ends here {% endcomment %}
 
@@ -230,16 +106,40 @@
                                 </div>
                                 <div class="timeline-item">
                                     <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Udemy (online)<br><b>Year:</b> Jan 2024<br>
+                                        <b>Skills:</b> Python, Django, React JS, React Native
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Great Learning (online)<br><b>Year:</b> Dec 2023<br>
+                                        <b>Skills:</b> Typescript
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
                                         <h2  class="h2">Master's in Datascience</h2>
-                                        <p  class="p"><b>Institute:</b> Atu, Donegal, Ireland.<br><b>Year:</b> (2023-2024)<br>
+                                        <p  class="p"><b>Institute:</b> Atu, Donegal, Ireland.<br><b>Year:</b> 2023-2024<br>
                                         <b>Skills:</b> Machine Learning, Deep Learning, Python(Pandas), Data warehouse.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="timeline-item">
                                     <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Greens technologies, Chennai, India.<br><b>Year:</b> 2021<br>
+                                        <b>Skills:</b> Core Java, Selenium
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
                                         <h2  class="h2">Bachelor's in Mechanical Engineering</h2>
-                                        <p  class="p"><b>Institute:</b> Veltech Hightech, Chennai, India.<br><b>Year:</b> (2016-2020)<br>
+                                        <p  class="p"><b>Institute:</b> Veltech Hightech, Chennai, India.<br><b>Year:</b> 2016-2020<br>
                                         <b>Skills:</b> AutoCad, Catia, Creo
                                         </p>
                                     </div>
@@ -323,6 +223,21 @@
                 of more than 10,000 individuals.</p>
                 <div class="container-fluid projectcontent">
                     <div class="row" style="padding-top:10px">
+                       
+                        <div class="col-md-6">
+                            <div class="project-box">
+                                <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
+                                    <img src="{%static '/images/portfolio.png'%}" >
+                                </a>
+                                <div class="overlay">
+                                    <h3>Portfolio</h3>
+                                <p class="project-p">Created a dynamic and personalized portfolio website using Python and Django, showcasing my skills, projects, and professional journey. <br><br></p>
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+                       
                         <div class="col-md-6">
                             <div class="project-box">
                                 <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
@@ -337,19 +252,7 @@
         
                         </div>
         
-                        <div class="col-md-6">
-                            <div class="project-box">
-                                <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
-                                    <img src="{%static '/images/portfolio.png'%}" >
-                                </a>
-                                <div class="overlay">
-                                    <h3>Portfolio</h3>
-                                <p class="project-p">Created a dynamic and personalized portfolio website using Python and Django, showcasing my skills, projects, and professional journey. <br><br></p>
-                                    
-                                </div>
-                            </div>
-        
-                        </div>
+                       
                         
                     </div>
                     <div class="row" style="padding-top:10px">
@@ -401,6 +304,39 @@
         </div>
         {% comment %} projects page ends here {% endcomment %}
 
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>PORTFOLIO</h5>
+
+                    <a style="text-decoration:none;padding:5px; font-size:18px;" href="{% static "PDF/Thivesh Resume 2.pdf" %}" download>Download CV <i class="fa fa-file-pdf-o ipdf" ></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5 style="text-align:left">Quick Links</h5>
+                    <ul style="list-style-type: none;padding: 0;margin: 0; text-align:left">
+                    <a style="text-decoration:none;" href="#Home"><li style="text-decoration: none;">Home</lr></a>
+                    <a style="text-decoration:none;" href="#About"><li style="text-decoration: none;">About</lr></a>
+                    <a style="text-decoration:none;" href="#skill"><li style="text-decoration: none;">Skills and achievement</lr></a>
+                    <a style="text-decoration:none;" href="#project"><li style="text-decoration: none;">Projects</lr></a>
+                    <a style="text-decoration:none;" href="#contact"><li style="text-decoration: none;">Contact</lr></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow me</h5>
+                    <a style="text-decoration:none; padding:5px" href="https://www.instagram.com/star_._boy._/"><i class="fa fa-instagram"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://www.facebook.com/profile.php?id=100005485574765"><i class="fa fa-facebook-f"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://www.linkedin.com/in/thivesh-jegadeesan-7406b3182/"><i class="fa fa-linkedin"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://github.com/thivesh-jegadeesan"><i class="fa fa-github"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact me</h5>
+                    <a style="text-decoration:none; padding:5px" href="tel:+353899674570"><i class="fa fa-phone"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="mailto:thivesh99@gmail.com"><i class="fa fa-envelope"></i></a>
+
+                </div>
+            </div>
+            {% comment %} <hr>
+            <p>Copyright © 2023 | PORTFOLIO | All Rights Reserved</p> {% endcomment %}
+        </footer>
     </div>
 </body>
 <script src="{% static "script/home.js" %}"></script>
