@@ -126,6 +126,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = '/portfolio/home'  # Adjust the URL path as needed
 
 # settings.py
+STATIC_ROOT = 'staticfiles'
+
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, '
 
