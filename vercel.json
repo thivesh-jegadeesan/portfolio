@@ -4,7 +4,9 @@
       { "src": "home", "use": "@vercel/static-build" }
     ],
     "routes": [
+      { "src": "/portfolio/all", "dest": "/home/templates/allapp.html" },
       { "src": "/(.*)", "dest": "/home/$1" }
     ],
     "cleanUrls": true
-}  
+  }
+  
