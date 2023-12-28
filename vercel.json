@@ -3,9 +3,9 @@
     "builds": [
       { "src": "home", "use": "@vercel/static-build" }
     ],
-    "routes": [
-      { "src": "/portfolio/all", "dest": "/home/templates/allapp.html" },
-      { "src": "/(.*)", "dest": "/home/$1" }
+    "redirects": [
+      { "source": "/", "destination": "/portfolio/all", "statusCode": 302 },
+      { "source": "/portfolio/all", "destination": "/home/templates/allapp.html", "statusCode": 200 }
     ],
     "cleanUrls": true
   }
