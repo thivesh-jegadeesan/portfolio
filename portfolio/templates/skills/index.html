@@ -1,0 +1,32 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About - My Site{% endblock %}
+
+{% block content %}
+<div class="container-fluid" >
+    <h3 style="padding-top:10px">Skills and Achivements</h3>
+    <!-- Add your about page content here -->
+    <div class="container-fluid" >
+        <p>Proficient in utilizing Jira for streamlined project management and GitHub for version control,
+             I bring a strong foundation in HTML, CSS, JavaScript, jQuery, Ajax, PHP, Laravel, Python, Django, and MySQL. 
+             My skills are complemented by hands-on experience and a commitment to delivering high-quality software solutions.</p>
+
+        <canvas id="myBarChart" width="100%" height="50%"></canvas>
+        <div style="padding-top:30px" >
+            <h3>Timeline</h3>
+            <p>Embarked on a dynamic career journey marked by continuous growth and achievement. 
+                From early roles in full-stack development to leadership positions in SaaS project management, 
+                my timeline reflects a commitment to innovation and excellence.</p>
+            <div  id="roadMap" data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Your JavaScript code for creating the chart -->
+  <script src="{% static "script/skill.js" %}"></script>
+{% endblock %}

@@ -1,0 +1,144 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h3 style="padding-top:10px">Resume</h3>
+    <div style="font-size:18px">&emsp;&emsp;Versatile professional with two years of experience as a Software Developer. 
+        Adept at coding to create reliable and user-friendly systems. 
+        Proficient in developing and upgrading API tracking products for the drug manufacturing industry.
+        Outstanding analytical abilities, problem-solving, decision-making, and interpersonal skills.
+    </div>
+   <p>You can download my resume <a href="{% static "PDF/Thivesh Resume 2.pdf" %}" download>here</a></p>
+    <div class="container" >
+        <div class="row" style="padding-top:20px;">
+            <div class="col-md-6">
+                <h5>Profile & Education</h5>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Thivesh Jegadeesan</h2>
+                            <p>Experienced full-stack developer with 2 years in diverse technologies, 
+                                specializing in front-end and back-end, and a proven track record as a team lead overseeing
+                                 successful project deliveries.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Master's in Datascience</h2>
+                            <p><b>Institute:</b> Atu, Donegal, Ireland.<br><b>Year:</b> (2023-2024)<br>
+                            <b>Skills:</b> Machine Learning, Deep Learning, Python(Pandas), Data warehouse.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Bachelor's in Mechanical Engineering</h2>
+                            <p><b>Institute:</b> Veltech Hightech, Chennai, India.<br><b>Year:</b> (2016-2020)<br>
+                            <b>Skills:</b> AutoCad, Catia, Creo
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Add more timeline items as needed -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h5>Professional Experience</h5>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Senior Software Engineer</h2>
+                            <p><b>Company:</b> Codentrix Technologies  <br> <b>Year:</b>  Jan 2023 - Sep 2023  <br>
+                                <b>Achivements:</b>Honored with the "Excellence" award, recognized as the first recipient in the past five years<br>
+                                <b>Projects:</b> PharmTracQR, Formulation <br>
+                            <b>Skills:</b> AWS(EC2, S3, RDS), Jira, Github, Python, Django, PostgreSql.<br>
+                            <b>Responsibilities:</b> As a Project Lead for two B2B SaaS software products, 
+                            successfully orchestrated the development, deployment, and maintenance for over 25 client companies,
+                             managing diverse subscriptions. Spearheaded the release of version 2.0, showcasing adept leadership in product evolution and client satisfaction.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Software Developer</h2>
+                            <p><b>Company:</b> Codentrix Technologies <br> <b>Year:</b>  Jan 2022 - Dec 2022  <br> <b>Projects:</b> Tracerbee, PharmTracQR <br>
+                            <b>Skills:</b> PHP, Laravel, Javascrip, JQuery, Ajax, MySQL.<br>
+                            <b>Responsibilities:</b> As a Full Stack Developer in a SaaS-based B2B product, contributed to the end-to-end development of the platform. 
+                            Elevated to a leadership role in PharmTracQR, steering the strategic direction and advancements of the SaaS B2B product.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Software Developer Trainee</h2>
+                            <p><b>Company:</b> Codentrix Technologies <br> <b>Year:</b> Sep 2021  - Dec 2021  <br> <b>Projects:</b> Emerson Invoice print application <br>
+                            <b>Skills:</b> HTML, CSS, Bootstrap, Javascrip.<br>
+                            <b>Responsibilities:</b>Contributed as a developer in an Invoice Print Application for client Emerson, specializing in generating PDFs for a range of documents, including invoices, warranty certificates, and QC certificates. Responsible for the technical implementation and functionality of the print application.</p>
+                        </div>
+                    </div>
+                    <!-- Add more timeline items as needed -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .timeline {
+        position: relative;
+        max-width: auto;
+        margin:  auto;
+        padding: 20px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 85%;
+        width: 2px;
+        height: 100%;
+        background-color: #000000;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        position: relative;
+        padding: 20px 0;
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 88.5%;
+        width: 20px;
+        height: 20px;
+        background-color: #000000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 20px;
+        max-width: 340px;
+    }
+    h5{
+        text-align: center;
+        font-weight: 550;
+    }
+
+    p {
+        margin-bottom: 0;
+        max-width: 340px;
+        font-size: 12px;
+    }
+</style>
+{% endblock %}

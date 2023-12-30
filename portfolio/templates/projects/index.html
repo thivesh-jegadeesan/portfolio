@@ -1,0 +1,130 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<style>
+    .project-box img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s cubic-bezier(0.25, 0.1, 0.14, 0.6);
+    }
+
+    {% comment %} .project-box img:hover{
+        width: 102%;
+    } {% endcomment %}
+    .projectcontent .project-box:hover{
+        width: 96%;
+        box-shadow: 2px 2px 11px 1px;
+    }
+.projectcontent .project-box {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    transition: width 2s;
+    width: 400px;
+    box-shadow: inset -1px 0px 4px 1px;
+}
+.overlay{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #9f9f9f47;
+}
+.project-p{
+    font-size:12px;
+    padding: 3px;
+}
+</style>
+
+<div class="container-fluid">
+    <h3 style="padding-top:10px">Recent Projects</h3>
+    <!-- Add your about page content here -->
+        <p>As a team lead at Codentrix, I successfully led the development, launch, and delivery of two impactful 
+        SaaS projects—PharmTracQR and Formulation. I played a key role in coding, ensuring quality, and 
+        overseeing project management. These solutions were adopted by over 25 clients, serving a user base 
+        of more than 10,000 individuals.</p>
+        <div class="container-fluid projectcontent">
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-6">
+                    <div class="project-box">
+                        <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
+                            <img src="{%static '/images/pharmtracqr.png'%}" >
+                        </a>
+                        <div class="overlay">
+                            <h3>PharmTracQR</h3>
+                        <p class="project-p">Led the development of PharmTracQR, a leading SaaS solution for API manufacturing companies, revolutionizing pharmaceutical traceability through a secure cloud-based platform.</p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-box">
+                        <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
+                            <img src="{%static '/images/portfolio.png'%}" >
+                        </a>
+                        <div class="overlay">
+                            <h3>Portfolio</h3>
+                        <p class="project-p">Created a dynamic and personalized portfolio website using Python and Django, showcasing my skills, projects, and professional journey. <br><br></p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-6">
+                    <div class="project-box">
+                        <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-agrochemical">
+                            <img src="{%static '/images/agro.png'%}" >
+                        </a>
+                        <div class="overlay">
+                            <h3>Formulation</h3>
+                        <p class="project-p">As the team lead for the Formulation project, I oversaw the successful development of a PHP Laravel-based solution enabling companies to generate QR codes with embedded weblinks and adhere to compliance mandates through seamless integration of hardware and end-to-end support.</p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="project-box">
+                        <a  target="_blank" href="https://www.codentrixtechnologies.com/traceability-software-and-services" target="_blank">
+                            <img src="{%static '/images/tracerbee.png'%}" >
+                        </a>
+                        <div class="overlay">
+                            <h3>Tracerbee</h3>
+                        <p class="project-p">Developed TracerBee, a comprehensive software product using PHP Laravel, enabling end-to-end Part Traceability. Seamlessly trace parts or items from Raw Material to Finished Goods with a single click</p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+               
+            </div>
+
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-6">
+                <div class="project-box">
+                    {% comment %} <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers"> {% endcomment %}
+                    <img src="{%static '/images/imginv.jpg'%}" height="50%">
+                    {% comment %} </a> {% endcomment %}
+                    <div class="overlay">
+                        <h3>Invoice Application</h3>
+                    <p class="project-p">Developed PHP Laravel code for Emerson, facilitating the printing of invoices, warranty certificates, QC certificates, and more, ensuring seamless document generation and management.</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+</div>
+{% endblock %}

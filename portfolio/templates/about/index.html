@@ -1,0 +1,121 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+{% block title %}About Thivesh{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 style="padding-top:10px">About</h3>
+    <p>&emsp;&emsp;Versatile professional with two years of experience as a Software Developer. 
+        Adept at coding to create reliable and user-friendly systems. 
+        Proficient in developing and upgrading API tracking products for the drug manufacturing industry.
+        Outstanding analytical abilities, problem-solving, decision-making, and interpersonal skills.
+    </p>
+    <div class="container" >
+        <div class="row" id="infodiv" style="vertical-align:middle;     border: 4px solid #695b5b54;border-radius: 10px;padding: 20px 0px 20px 20px;">
+            <div class="col-md-3">
+                <img src="{% static "images/info.png" %}" width="100%" style="border-radius: 50%;    vertical-align: middle; height: 100%;">
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-2 infonameb">
+                        DOB
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : 07/03/1999
+                    </div>
+                    <div class="col-md-2 infonameb">
+                        Age
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : 25
+                    </div>
+                </div>
+                
+                <div class="row" >
+                    <div class="col-md-2 infonameb">
+                        Degree
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Master's in Data Science
+                    </div>
+                    <div class="col-md-2 infonameb">
+                        Experience
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Full stack developer
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-2 infonameb">
+                        Current Status
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Student
+                    </div>
+                    <div class="col-md-2 infonameb">
+                        College
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : ATU Donegal
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-2 infonameb">
+                        Freelance
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Available
+                    </div>
+                    
+                    <div class="col-md-2 infonameb">
+                        Sex
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Male
+                    </div>
+                </div>
+
+                <div class="row" >
+                    <div class="col-md-2 infonameb">
+                        Current location
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Letterkenny, Ireland
+                    </div>
+                    <div class="col-md-2 infonameb">
+                        Nationality
+                    </div>
+                    <div class="col-md-4 infoname">
+                        : Indian
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-2 infonameb">
+                        Phone
+                    </div>
+                    <div class="col-md-4 infoname">
+                        <a href = "tel: +353899674570">: +353899674570</a>
+                        <br>
+                        <a href = "tel: +918870455575">: +918870455575</a>
+                    </div>
+                    <div class="col-md-2 infonameb">
+                        Email
+                    </div>
+                    <div class="col-md-4 infoname">
+                        <a href = "mailto: thivesh99@gmail.com">: thivesh99@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+<script>
+{% comment %} $('#infodiv').slideUp('slow'); {% endcomment %}
+$( "#infodiv" ).animate({ "right": "+=50px" }, "slow" );
+</script>
+{% endblock %}

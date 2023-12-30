@@ -1,0 +1,26 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body onload="myFunction()" style="background-image: url({% static 'images/thiveshbg1.jpg' %});  background-repeat: no-repeat; background-size: 100% 505%;">
+        <div class="container" >
+           
+            {% comment %} <div class="d-flex flex-grow-10 justify-content-center align-items-center"> {% endcomment %}
+                <div class="row" style="padding:50px 0px 0px 100px; font-weight: bold; font-size:40px">
+                    Thivesh Jegadeesan            
+                </div>
+                <div class="row" style="padding:0px 0px 0px 120px">
+                    <div class="col-md-1"style="margin:0px 0px 0px 50px; width: fit-content;font-weight: bold; font-size:40px">
+                        I'm a
+                    </div> 
+                    <div class="col-md-8" id="devdiv" style="font-weight: bold; font-size:40px"></div>      
+                </div>
+        </div>
+</body>
+
+<script src="{% static "script/home.js" %}"></script>
+
+{% endblock %}
